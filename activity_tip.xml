@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.layeamehta.leotscalculator.TipActivity">
+
+    <TextView
+        android:id="@+id/intro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorAccent"
+        android:text="Leo's Tip Calculator"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/payment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Please enter your payment:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/payment_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Payment amount..."
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/payment_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/payment_text"
+        android:layout_alignStart="@+id/payment_text"
+        android:layout_below="@+id/payment_entry"
+        android:layout_marginTop="11dp"
+        android:text="Please select tip percentage:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/tip_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/payment_text2"
+        android:layout_marginTop="17dp"
+        android:max="50"
+        android:progress="25" />
+
+    <TextView
+        android:id="@+id/tip_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_seekbar"
+        android:layout_centerHorizontal="true"
+        android:text="25%"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_percentage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/tip_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intro_text"
+        android:layout_alignStart="@+id/intro_text"
+        android:layout_below="@+id/calculate_button"
+        android:layout_marginTop="24dp"
+        android:text="The tip amount is:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tip_amount_text"
+        android:layout_alignRight="@+id/tip_amount_text"
+        android:layout_below="@+id/tip_amount_text"
+        android:layout_marginTop="22dp"
+        android:text="The total amount is:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/total_amount_text"
+        android:layout_toEndOf="@+id/calculate_button"
+        android:layout_toRightOf="@+id/calculate_button"
+        android:background="@color/colorAccent"
+        android:text="              "
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total_amount_text"
+        android:layout_alignBottom="@+id/total_amount_text"
+        android:layout_alignLeft="@+id/tip_amount"
+        android:layout_alignStart="@+id/tip_amount"
+        android:background="@color/colorAccent"
+        android:text="              "
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

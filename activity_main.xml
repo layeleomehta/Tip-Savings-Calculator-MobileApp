@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.layeamehta.leotscalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/title_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Welcome to Leo's"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_text1"
+        android:layout_centerHorizontal="true"
+        android:text="Tip and Savings"
+        android:textAlignment="center"
+        android:textColor="?attr/colorError"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_text2"
+        android:layout_centerHorizontal="true"
+        android:text="Calculator"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/choose_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_text3"
+        android:layout_marginTop="31dp"
+        android:text="Please choose the calculator you want to use:"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/savings_button"
+        android:layout_alignLeft="@+id/savings_button"
+        android:layout_alignRight="@+id/savings_button"
+        android:layout_alignStart="@+id/savings_button"
+        android:layout_below="@+id/choose_text"
+        android:layout_marginTop="36dp"
+        android:text="Tip Calculator" />
+
+    <Button
+        android:id="@+id/savings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="Savings Calculator" />
+
+</RelativeLayout>

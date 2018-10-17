@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.layeamehta.leotscalculator.SavingsActivity">
+
+    <TextView
+        android:id="@+id/intro_savings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorAccent"
+        android:text="Leo's Savings Calculator"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/savings_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro_savings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Please enter the amount you were paid:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/payment_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/savings_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Payment amount..."
+        android:inputType="number"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/savings_percentage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intro_savings"
+        android:layout_alignStart="@+id/intro_savings"
+        android:layout_below="@+id/payment_amount"
+        android:layout_marginTop="36dp"
+        android:text="Please select savings percentage:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/savings_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/savings_percentage_text"
+        android:max="100"
+        android:progress="25" />
+
+    <TextView
+        android:id="@+id/savings_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/savings_seekbar"
+        android:layout_centerHorizontal="true"
+        android:text="25%"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/calculate_savings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/savings_percentage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/savings_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/intro_savings"
+        android:layout_alignStart="@+id/intro_savings"
+        android:layout_below="@+id/calculate_savings_button"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="25dp"
+        android:text="Amount in savings:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/savings_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/savings_amount_text"
+        android:layout_alignBottom="@+id/savings_amount_text"
+        android:layout_toEndOf="@+id/calculate_savings_button"
+        android:layout_toRightOf="@+id/calculate_savings_button"
+        android:background="@color/colorAccent"
+        android:text="               "
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+</RelativeLayout>
